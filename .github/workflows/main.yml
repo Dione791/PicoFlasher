@@ -20,18 +20,18 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y cmake ninja-build gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential
 
-    - name: Get Pico SDK with Submodules
+    - name: Get Pico SDK & Init Submodules
       run: |
         git clone https://github.com/raspberrypi/pico-sdk.git
         cd pico-sdk
         git submodule update --init --recursive
+        echo "PICO_SDK_PATH=$GITHUB_WORKSPACE/pico-sdk" >> $GITHUB_ENV
 
     - name: Build Project
       run: |
-        export PICO_SDK_PATH=$GITHUB_WORKSPACE/pico-sdk
         mkdir build
         cd build
-        cmake -G Ninja ..
+        cmake -G Ninja -DPICO_SDK_FETCH_FROM_GIT=off ..
         ninja
 
     - name: Upload UF2 Artifact
