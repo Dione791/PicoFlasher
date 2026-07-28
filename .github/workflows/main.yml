@@ -20,8 +20,11 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y cmake ninja-build gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential
 
-    - name: Get Pico SDK
-      run: git clone https://github.com/raspberrypi/pico-sdk.git --recursive
+    - name: Get Pico SDK with Submodules
+      run: |
+        git clone https://github.com/raspberrypi/pico-sdk.git
+        cd pico-sdk
+        git submodule update --init --recursive
 
     - name: Build Project
       run: |
