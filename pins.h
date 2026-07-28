@@ -21,7 +21,7 @@
 #define SPI_SS_N 17
 #define SPI_CLK 18
 #define SPI_MOSI 19
-#define SMC_DBG_EN 20
+#define SMC_DBG_EN 22
 #define SMC_RST_XDK_N 21
 
 #define NUVOTON_SPI_RDY 11 // FT2V4
