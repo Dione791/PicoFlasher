@@ -373,7 +373,7 @@ void tud_cdc_tx_complete_cb(uint8_t itf)
 int main(void)
 {
 	vreg_set_voltage(VREG_VOLTAGE_1_30);
-	set_sys_clock_khz(266000, true);
+	set_sys_clock_khz(160000, true);
 
 	uint32_t freq = clock_get_hz(clk_sys);
 	clock_configure(clk_peri, 0, CLOCKS_CLK_PERI_CTRL_AUXSRC_VALUE_CLK_SYS, freq, freq);
