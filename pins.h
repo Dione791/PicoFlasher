@@ -24,13 +24,15 @@
 #define SMC_DBG_EN 4
 #define SMC_RST_XDK_N 5
 
-#define NUVOTON_SPI_RDY 15 // FT2V4
-#define NUVOTON_SPI_MISO 26 // FT2R7
-#define NUVOTON_SPI_SS_N 27 // FT2R6
-#define NUVOTON_SPI_CLK 28 // FT2T4
-#define NUVOTON_SPI_MOSI 29 // FT2T5
+#define NUVOTON_SPI_RDY 11 // FT2V4
+#define NUVOTON_SPI_MISO 12 // FT2R7
+#define NUVOTON_SPI_SS_N 13 // FT2R6
+#define NUVOTON_SPI_CLK 14 // FT2T4
+#define NUVOTON_SPI_MOSI 15 // FT2T5
 
-#define SMC_CPU_RST 7
-#define SMC_POST_0 8
+#define MMC_RST_PIN 9
+#define MMC_CLK_PIN 8
+#define MMC_CMD_PIN 7
+#define MMC_DAT0_PIN 6
 
 #endif
